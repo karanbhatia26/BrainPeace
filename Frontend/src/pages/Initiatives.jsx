@@ -20,7 +20,7 @@ const initiatives = [
   },
   {
     text: "[italic]The Black Dog Institute [italic]Aims to design programmes to create healthier workplace environments and implement workplace programmes that support mental health and wellbeing. Businesses are assisted with creating an organisation that is non-discriminatory and open to helping those who need mental health support.",
-    image: "https://cdn.pixabay.com/photo/2018/04/25/22/49/cranium-3350798_640.png",
+    image: "https://cdn.pixabay.com/photo/2022/07/15/18/27/mental-health-7323725_640.png",
     link: "https://www.blackdoginstitute.org.au/education-services/workplaces/",
   },
   {
@@ -34,6 +34,51 @@ const initiatives = [
     link: "https://thebanyan.org/",
   },  
   ];
+// const backgroundColors = [
+//   "#feecda", 
+//   "#cfbede",
+//   "#add9e0",
+//   "#ddedea",
+//   "#9886c3",
+//   "#dab9b2"
+// ];
+
+// const Initiatives = () => {
+//   return (
+//     <div className="initiatives-container" style={{ width: '100%' }}>
+//       <h1>Mental Health Initiatives</h1>
+//       {initiatives.map((initiative, index) => (
+//         <MentalHealthInitiative
+//           key={index}
+//           text={initiative.text}
+//           image={initiative.image}
+//           alt={initiative.text} 
+//           link={initiative.link}
+//           backgroundColor={backgroundColors[index % backgroundColors.length]}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default Initiatives;
+// import React from 'react';
+// import MentalHealthInitiative from './MentalHealthInitiative';
+
+// const initiatives = [
+//   {
+//     text: "[italic]MINDS Foundation[italic]Aims to destigmatize mental health and provide access to high-quality and cost-effective mental health care. It is achieving this goal by providing education and making mental health care accessible. By undertaking continuous research, the Foundation is also creating effective intervention programs.",
+//     image: "https://cdn.pixabay.com/photo/2022/10/18/11/02/woman-7529904_640.png",
+//     link: "https://www.mindsfoundation.org/",    
+//   },
+//   {
+//     text: "[italic]National Mental Health Programme (NMHP)[italic]Launched by the Government of India to deal with the the absolute inadequacy of mental health care infrastructure in the country. It aims to ensure the availability and accessibility of minimum mental health care for all in the near foreseeable future, particularly to the most vulnerable sections of the population.",
+//     image: "https://cdn.pixabay.com/photo/2022/10/18/11/02/mood-7529903_640.png",
+//     link: "https://nhm.gov.in/index1.php?lang=1&level=2&sublinkid=1043&lid=359",
+//   },
+//   // Add other initiatives here...
+// ];
+
 const backgroundColors = [
   "#feecda", 
   "#cfbede",
@@ -55,6 +100,7 @@ const Initiatives = () => {
           alt={initiative.text} 
           link={initiative.link}
           backgroundColor={backgroundColors[index % backgroundColors.length]}
+          isTextOnLeft={index % 2 === 0} // Alternating sides for images
         />
       ))}
     </div>

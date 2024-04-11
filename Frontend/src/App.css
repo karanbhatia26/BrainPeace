@@ -69,6 +69,7 @@ header {
   max-width: 1600px;
   margin: 0 auto;
   padding: 10px 20px;
+  height: 100px;
 }
 
 .logo img {
@@ -1089,7 +1090,7 @@ blockquote {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-image: url(./images/contactBackground.jpg);
+  /* background-image: url(./images/contactBackground.jpg); */
   /* background-image: url("https://www.designyourway.net/blog/wp-content/uploads/2018/11/pastel-background-goo.jpg"); Replace with the actual path to your image */
   background-size: cover;
   background-position: center;
@@ -1099,7 +1100,7 @@ blockquote {
 .contact-info {
   flex: 1;
   padding: 2rem;
-  background-image: url(./images/formbackground.jpg);
+  /* background-image: url(./images/formbackground.jpg); */
   /* background-image: url("https://t4.ftcdn.net/jpg/05/08/85/65/360_F_508856527_j47VSpWgbNbECuiOa9kSUllJBuZ2V1hF.jpg"); Replace with the actual path to your background image */
   background-size: cover;
   background-color: white;
@@ -1135,7 +1136,7 @@ blockquote {
 .contact-form {
   flex: 1;
   padding: 2rem;
-  background-image: url("https://t4.ftcdn.net/jpg/05/08/85/65/360_F_508856527_j47VSpWgbNbECuiOa9kSUllJBuZ2V1hF.jpg"); /* Replace with the actual path to your background image */
+  /* background-image: url("https://t4.ftcdn.net/jpg/05/08/85/65/360_F_508856527_j47VSpWgbNbECuiOa9kSUllJBuZ2V1hF.jpg"); Replace with the actual path to your background image */
   background-size: cover; /* Cover the entire element */
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
@@ -1173,7 +1174,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #ffcccc;
+  background-color: #007bff;
 }
 
 .contact-form,
@@ -1208,6 +1209,7 @@ button[type="submit"]:hover {
   animation-delay: 0.2s; /* Delay the animation slightly */
 }
 
+
 /* Mental Health Carousel styles (Articles Main Page) */
 
 .carousel {
@@ -1216,6 +1218,7 @@ button[type="submit"]:hover {
   gap: 20px;
   padding: 20px;
 }
+
 
 .carousel-item {
   display: flex;
@@ -1227,6 +1230,7 @@ button[type="submit"]:hover {
   padding: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
 
 .carousel-item img {
   width: 100%;
@@ -1242,7 +1246,16 @@ button[type="submit"]:hover {
 .carousel-item p {
   margin-top: 10px;
   margin-bottom: 15px;
-  color: #666;
+  color: #000000;
+}
+.carousel-item {
+  /* Existing styles */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for smooth animation */
+}
+
+.carousel-item:hover {
+  transform: translateY(-10px); /* Move the item slightly upwards on hover */
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); Increase shadow on hover */
 }
 
 .read-more {
@@ -1437,8 +1450,8 @@ button[type="submit"]:hover {
 .about-us {
   text-align: center;
   padding: 40px;
-  background-color: #ffb6c1;
-  background-image: url("https://images.template.net/94766/pastel-pink-background-yw0ub.jpg");
+  background-color: #ffffff;
+  /* background-image: url("https://images.template.net/94766/pastel-pink-background-yw0ub.jpg"); */
 }
 
 .founders {
@@ -1614,7 +1627,7 @@ body.light-mode {
   align-items: end;
 }
 .content {
-  background-color: #e6f7ff; /* Light blue background */
+  background-color: #ffffff; /* Light blue background */
 }
 #root{
   background-color: #e6f7ff ;
@@ -1633,6 +1646,7 @@ body.light-mode {
   border-radius: 20px; /* Light gray border */
   /* background-color: #ffffff; White background */
   background-color: #f2f2f2; }
+    
 
 /* Style the chat log */
 .chat-log {
@@ -1718,3 +1732,5 @@ button:active {
     width: calc(100% - 20px);
   }
 }
+
+
