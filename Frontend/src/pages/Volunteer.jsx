@@ -1,26 +1,25 @@
-import React from 'react';
 const founders = [
   {
     name: 'Nickhil Shivakumar',
      
   
-    image: " images cat/1f5b1a0c-08b8-4e3b-b149-748018527030.jpg", // Replace with actual image file
+    image: "./src/images/nixxil.jpg",
   },
   {
     name: 'Harsh Ahuja',
     
-    image: 'images cat/747bb105-9292-4ed9-98af-911c1216f163.jpg', // Replace with actual image file
+    image: './src/images/Harsh.jpg', 
   },
 
   {
     name: 'Piyush',
     
-    image: 'images cat/9513b570-4e2a-4c3d-ac74-b49c58c94787.jpg', // Replace with actual image file
+    image: './src/images/peeyush.jpg',
   },
   {
     name: 'Karan Bhatia',
     
-    image: 'images cat/d20226c5-6cb4-47c5-a8c9-4a6fff0ffb69.jpg', // Replace with actual image file
+    image: './src/images/Karan.jpg',
   },
 ];
 

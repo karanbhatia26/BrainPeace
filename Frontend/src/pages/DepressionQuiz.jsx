@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {DepressionResult} from "../components/QuizResult";
 import ".././App.css";
 

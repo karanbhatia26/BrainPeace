@@ -47,6 +47,7 @@ import axios from 'axios';
 const Chat = () => {
   const [chatLog, setChatLog] = useState([]);
   const [userInput, setUserInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // New state variable
 
   const sendMessage = async () => {
     if (userInput.trim() === '') return;
@@ -54,6 +55,7 @@ const Chat = () => {
     const newChatLog = [...chatLog, { sender: 'You', message: userInput }];
     setChatLog(newChatLog);
     setUserInput('');
+    setIsLoading(true); // Set loading state to true when sending a message
 
     try {
       const response = await axios.post('http://127.0.0.1:5000/api/chat', { message: userInput });
@@ -61,6 +63,8 @@ const Chat = () => {
       setChatLog([...newChatLog, { sender: 'Chatbot', message }]);
     } catch (error) {
       console.error('Error:', error);
+    } finally {
+      setIsLoading(false); // Set loading state to false after receiving a response
     }
   };
 
@@ -77,6 +81,13 @@ const Chat = () => {
             {log.message}
           </div>
         ))}
+        {isLoading && (
+  <div>
+    <span className="typing-indicator"></span>
+    <span className="typing-indicator"></span>
+    <span className="typing-indicator"></span>
+  </div>
+)}{/* Add the loading spinner here */}
       </div>
       <input
         type="text"

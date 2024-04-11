@@ -92,17 +92,19 @@ const Initiatives = () => {
   return (
     <div className="initiatives-container" style={{ width: '100%' }}>
       <h1>Mental Health Initiatives</h1>
-      {initiatives.map((initiative, index) => (
-        <MentalHealthInitiative
-          key={index}
-          text={initiative.text}
-          image={initiative.image}
-          alt={initiative.text} 
-          link={initiative.link}
-          backgroundColor={backgroundColors[index % backgroundColors.length]}
-          isTextOnLeft={index % 2 === 0} // Alternating sides for images
-        />
-      ))}
+      <div className="cards-container">
+        {initiatives.map((initiative, index) => (
+          <MentalHealthInitiative
+            key={index}
+            text={initiative.text}
+            image={initiative.image}
+            alt={initiative.text} 
+            link={initiative.link}
+            backgroundColor={backgroundColors[index % backgroundColors.length]}
+            isTextOnLeft={index % 2 === 0} // Alternating sides for images
+          />
+        ))}
+      </div>
     </div>
   );
 };

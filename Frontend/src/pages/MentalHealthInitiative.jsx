@@ -112,7 +112,7 @@
 // };
 
 // export default MentalHealthInitiative;
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 
 const MentalHealthInitiative = ({ text, image, link, isTextOnLeft, backgroundColor }) => {
   const elementRef = useRef(null);
@@ -135,31 +135,30 @@ const MentalHealthInitiative = ({ text, image, link, isTextOnLeft, backgroundCol
       </>
     );
   };
-
   const containerStyle = {
-    backgroundColor,
-    width: '100%',
     display: 'flex',
-    justifyContent: 'center',
+    flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'center',
+    border: '1px solid #ccc',
+    boxShadow: '0 2px 5px rgba(0, 0, 0, 0.15)',
+    padding: '10px',
+    margintop: '50px',
+    margin: '10px',
+    boxSizing: 'border-box',
     borderRadius: '10px',
-    padding: '20px',
-    // marginBottom: '20px',
+    width: '300px',
   };
-
+  
+  const imageContainerStyle = {
+    width: '100%',
+  };
+  
   const textContainerStyle = {
     display: 'flex',
+    flexDirection: 'column',
     alignItems: 'center',
-    textAlign: 'center',
-    flex: 1,
-    padding: '0 20px',
-  };
-
-  const imageContainerStyle = {
-    display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
   };
 
   const imageStyle = {
@@ -172,13 +171,13 @@ const MentalHealthInitiative = ({ text, image, link, isTextOnLeft, backgroundCol
     <div className={`grid-row`} style={containerStyle}>
       {isTextOnLeft ? (
         <>
-          <div className={`grid-text`} ref={elementRef} style={textContainerStyle}>
-            {renderFormattedText()}
-          </div>
           <div className={`grid-image`} ref={elementRef} style={imageContainerStyle}>
             <a href={link} target="_blank" rel="noopener noreferrer">
               <img src={image} alt="Initiative" style={imageStyle} />
             </a>
+          </div>
+          <div className={`grid-text`} ref={elementRef} style={textContainerStyle}>
+            {renderFormattedText()}
           </div>
         </>
       ) : (

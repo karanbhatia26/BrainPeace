@@ -6,7 +6,7 @@ app = Flask(__name__)
 #Fixed 
 CORS(app)
 
-genai.configure(api_key='AIzaSyC9SK0ULLO8I0tWGjHUILyYltHzuJr7Ml8')
+genai.configure(api_key='AIzaSyAHIk-kIQMnz5wfOZLgAsKy0EKWyebvc3U')
 model = genai.GenerativeModel('gemini-pro')
 
 @app.route('/api/chat', methods=['POST'])
