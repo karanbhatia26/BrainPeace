@@ -20,32 +20,43 @@ function Login({ setIsAuth }) {
   };
 
   return (
-    <div className="loginPage">
-      <header className="login-header">
-        <h1>Welcome to BrainPeace</h1>
-        <p>Please sign in with Google to continue.</p>
-      </header>
-      <div className="login-content">
-        <button className="login-with-google-btn" onClick={signInWithGoogle}>
-          
-          Sign in with Google
-        </button>
+    <div className="login_back">
+    <div className="Sign_container">
+      <div className="Sign_full_box">
+        <div className="Sign_form-container">
+          <form action="user_login.php" method="post">
+            <h2>Sign In</h2>
+            <input type="text" placeholder="Username or Email" name="uname" id="username" required />
+            <input type="password" placeholder="Password" name="psw" id="password" required />
+            <button type="submit" id="sign-up">Sign In</button>
+          </form>
+        </div>
+
+        <div className="Sign_google">
+          <p>OR</p>
+          <div className="Sign_signin">
+            <button type="button" className="login-with-google-btn" id="googlee" onClick={signInWithGoogle}>
+              Sign in with Google
+            </button>
+          </div>
+        </div>
       </div>
-      <footer className="login-footer">
-        <p>
-          By signing in, you agree to our{" "}
-          <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">
-            Privacy Policy
-          </a>{" "}
-          and{" "}
-          <a href="/terms-of-service" target="_blank" rel="noopener noreferrer">
-            Terms of Service
-          </a>
-          .
-        </p>
-      </footer>
+
+      <div className="Sign_title">
+        <span>Welcome to </span>
+        <b id="main_login">BrainPeace!</b>
+      </div>
+    </div>
     </div>
   );
 }
-
 export default Login;
+// return (
+//   <div className="loginPage">
+//     <p>Sign In With Google to Continue</p>
+//     <button className="login-with-google-btn" onClick={signInWithGoogle}>
+//       Sign in with Google
+//     </button>
+//   </div>
+// );
+// }
